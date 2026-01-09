@@ -39,7 +39,8 @@ if __name__ == "__main__":
                     break
             if count <= 6 and len(line) > count and line[count] == ' ':
                 content = line[count + 1:].strip()
-                html_lines.append("<h{}>{}</h{}>".format(count, content, count))
+                html_line = "<h{}>{}</h{}>".format(count, content, count)
+                html_lines.append(html_line)
         # Handle unordered list items
         elif line.startswith('- '):
             if not in_ul:
